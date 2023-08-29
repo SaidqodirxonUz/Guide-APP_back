@@ -1,5 +1,10 @@
-const express = require('express');
-const { NotFoundError, BadRequestError, UnauthorizedError, ForbiddenError } = require('.');
+const express = require("express");
+const {
+  NotFoundError,
+  BadRequestError,
+  UnauthorizedError,
+  ForbiddenError,
+} = require(".");
 
 /**
  * @param {Error} err
