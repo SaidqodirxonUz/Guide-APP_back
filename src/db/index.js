@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const config = require("../shared/config/index");
+const config = require("../shared/config");
 
 module.exports = function () {
   return mongoose
