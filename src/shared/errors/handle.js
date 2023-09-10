@@ -13,7 +13,6 @@ const {
  * @param {express.NextFunction} next
  */
 module.exports = (err, req, res, next) => {
-  console.log(err);
   let status = 500;
 
   if (err instanceof BadRequestError) status = 400;
