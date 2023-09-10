@@ -13,7 +13,7 @@ const allUserGuide = require("./allUserGuide");
 const getUserGuide = require("./showUserGuide");
 const removeUserGuide = require("./removeUserGuide");
 const bulkGuide = require("./bulkGuide");
-const readUserGuide = require("./editUserGuide");
+const readUserGuideS = require("./readUserGuide");
 
 const bulkGuideUser = async (req, res, next) => {
   try {
@@ -51,7 +51,7 @@ const readUserGuide = async (req, res, next) => {
       throw new Error(error.details[0].message);
     }
 
-    const result = await readUserGuide({
+    const result = await readUserGuideS({
       id: req.params.id,
     });
 

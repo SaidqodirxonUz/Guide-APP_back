@@ -1,7 +1,7 @@
 const { NotFoundError } = require("../../shared/errors");
 const UserGuide = require("./UserGuide");
 
-async function readUserGuide({ id }) {
+async function readUserGuideS({ id }) {
   try {
     const existing = await UserGuide.findOne({ _id: id });
 
@@ -21,4 +21,4 @@ async function readUserGuide({ id }) {
   }
 }
 
-module.exports = readUserGuide;
+module.exports = readUserGuideS;
