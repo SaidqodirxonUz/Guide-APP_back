@@ -5,13 +5,11 @@ const {
   postBulkUserGuideSchema,
   readUserGuideSchema,
   showUserGuideSchema,
-  deleteUserGuideSchmea,
 } = require("./_schemas");
 
 const addUserGuide = require("./addUserGuide");
 const allUserGuide = require("./allUserGuide");
 const getUserGuide = require("./showUserGuide");
-const removeUserGuide = require("./removeUserGuide");
 const bulkGuide = require("./bulkGuide");
 const readUserGuideS = require("./readUserGuide");
 
@@ -97,26 +95,10 @@ const showUserGuide = async (req, res, next) => {
   }
 };
 
-const deleteUserGuide = async (req, res, next) => {
-  try {
-    const result = await removeUserGuide(
-      { id: req.params.id },
-      deleteUserGuideSchmea
-    );
-
-    res.status(200).json({
-      data: result,
-    });
-  } catch (error) {
-    next(error);
-  }
-};
-
 module.exports = {
   postUserGuide,
   readUserGuide,
   bulkGuideUser,
   getUserGuides,
   showUserGuide,
-  deleteUserGuide,
 };
